@@ -196,7 +196,7 @@ class Vigenere:
 	# And henceforth heed grim warning:
 	# *Beware the STACK OVERFLOW*
 	# -
-	# In all serious though, I am open to sggestions. Please.
+	# In all serious though, I am open to suggestions. Please.
 	
 	def generate_wordlist(self, keysoup, word, step):
 		# if there's more consonants in a row than the cutoff, it's fair to assume the word is no actual word. Marginal reduction in wordlist-size.
