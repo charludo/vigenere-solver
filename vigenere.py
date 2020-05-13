@@ -127,10 +127,9 @@ class Vigenere:
 					pat = r'(?<=' + chunk + ').+?(?=' + chunk + ')' # evaluates to a list of all non-overlapping strings between instances of the chunk
 					matches = re.findall(pat, self.e)
 
-					# throw out any findings that are longer than the maximum allowed keylength
 					# add i to the length of the remaining strings, since the regex only delivered the string between two chunks
 					# store in kl if there's still something left to store, blacklist either way.
-					results = sorted([len(m)+i for m in matches if len(m)+i <= self.MAX_KEYWORD_LENGTH])
+					results = sorted([len(m)+i for m in matches])
 					if results: kl[chunk] = results
 					blacklist += [chunk]
 
